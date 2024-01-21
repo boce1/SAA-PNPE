@@ -48,6 +48,10 @@ int main()
     return 0;
 }
 
+/*
+4.Да се напише програма, която проверява дали между елементите на редицата 
+а0, а1, а2,..., аn са изпълнени релациите: а0 < a1 > a2 < a3...
+*/
 int zad4(int* arr, const int size)
 {
     int i;
@@ -77,6 +81,11 @@ void testZad4(int* arr, const int size, int output)
     }
 }
 
+/*
+6.Даден е едномерен масив с n елемента. Да се напише програма, 
+която намира броя на намаляващите редици от елементи в масива, 
+тяхната дължина и най-дългата от тях.
+*/
 void zad6(int* arr, const int n)
 {
     int i, len, maxLen, maxIndex, arrIndex;
@@ -131,13 +140,19 @@ void zad6(int* arr, const int n)
 
 
     // output
+    printf("[ ");
+    for(i = 0; i < n; i++)
+    {
+        printf("%d, ", arr[i]);
+    }
+    printf("]\n");
     printf("Lenght of subarrays: [ ");
     for(i = 0; i < arrIndex; i++)
     {
         printf("%d ", lenghts[i]);
     }
     printf("]   %d subbarrays\n", arrIndex);
-    printf("The biggest subbarray : [");
+    printf("The biggest subbarray : [ ");
     for(i = maxIndex; i < maxIndex + maxLen; i++)
     {
         printf("%d ", arr[i]);
